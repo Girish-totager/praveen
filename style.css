@@ -1,0 +1,173 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Notes container */
+.Notes {
+    background: white;
+    max-width: 500px;   /* ✅ fluid width */
+    width: 100%;
+    padding: 25px;
+    margin: 20px auto;
+    border-top: 5px solid blue;
+    box-shadow: 0 0 7px 6px rgba(0, 0, 0, 0.5);
+}
+
+.Notes h2 {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Input groups */
+.input-name {
+    width: 90%;
+    position: relative;
+    margin: 20px auto;
+}
+
+.user {
+    padding: 8px 11px;
+}
+
+.name {
+    width: 45%;
+    padding: 8px 0 8px 40px;
+}
+
+.input-name span {
+    margin-left: 35px;
+}
+
+.text-name {
+    width: 100%;
+    padding: 8px 0 8px 40px;
+}
+
+.input-name i {
+    position: absolute;
+    padding: 8px;
+    color: blue;
+    font-size: 18px;
+    outline: none;
+    border-right: 1px solid #cccccc;
+}
+
+.email {
+    padding: 8px;
+}
+
+/* Inputs */
+.text-name,
+.name {
+    border: 1px solid #cccccc;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.text-name:hover,
+.name:hover {
+    background-color: #fafafa;
+}
+
+.text-name:focus,
+.name:focus {
+    border: 1px solid blueviolet;
+}
+
+/* Radio buttons */
+.radio-button {
+    margin-right: 3px;
+}
+
+/* Button */
+.button {
+    background-color: blue;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background: green;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 600px) {
+    .Notes {
+        padding: 1rem;
+        margin: 10px;
+    }
+
+    .form-notes {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .input-name {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 15px auto;
+    }
+
+    .input-name span {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .text-name,
+    .name {
+        width: 100%;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .input-name i {
+        position: relative;   /* ✅ fixes overlap */
+        border-right: none;
+        margin-bottom: 5px;
+    }
+
+    .button {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    label {
+        margin-right: 0 !important;
+        margin-bottom: 0.5rem;
+    }
+
+    .radio-button {
+        margin-bottom: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .fa {
+        margin-bottom: 0.5rem;
+    }
+}

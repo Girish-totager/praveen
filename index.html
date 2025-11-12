@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosmic Portal</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #000010, #1a0033);
+      overflow: hidden;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      box-shadow:
+        50px 80px white,
+        150px 200px #aaa,
+        250px 50px #fff,
+        350px 150px #ccc,
+        450px 250px #eee;
+      animation: twinkle 2s infinite alternate;
+      z-index: 0;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
+
+    .astronaut {
+      width: 120px;
+      height: 120px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Astronaut_icon.svg/512px-Astronaut_icon.svg.png') no-repeat center;
+      background-size: contain;
+      margin-bottom: 20px;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin: 0;
+      text-shadow: 0 0 10px #fff;
+      z-index: 1;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 14px 28px;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0 0 15px #00c6ff;
+      transition: transform 0.3s ease;
+      z-index: 1;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .btn {
+        padding: 12px 24px;
+        font-size: 1em;
+      }
+
+      .astronaut {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="stars"></div>
+    <div class="astronaut"></div>
+    <h1>Welcome to the Universe Within</h1>
+    <a href="registration.html" class="btn">Enter Portal</a>
+  </div>
+</body>
+</html>

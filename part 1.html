@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deep Dive into Stars</title>
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --text: #c5c6c7;
+      --accent: #66fcf1;
+      --section: #1f2833;
+      --heading: #45a29e;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--section);
+      color: var(--accent);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 1.5rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      color: var(--heading);
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      border: 1px solid #444;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    th {
+      background: #1f2833;
+      color: var(--accent);
+    }
+
+    img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 1rem auto;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #66fcf1;
+      color: #0b0c10;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #45a29e;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      padding: 1rem;
+      background: #111;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      table {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="top">
+    <h1>Deep Dive into Stars</h1>
+    <p>From quantum sparks to cosmic legacy</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>🖼️ Featured Nebula Image</h2>
+      <img src="nebbulla.jpg" alt="Nebula image">
+      <p style="text-align:center;">A stunning nebula—where stars are born and cosmic dust dances in light.</p>
+    </section>
+
+    <section>
+      <h2>What Is a Star?</h2>
+      <p>A star is a self-luminous sphere of plasma held together by gravity, undergoing nuclear fusion in its core. It transforms matter and radiates energy across the cosmos.</p>
+    </section>
+
+    <section>
+      <h2>Stellar Genesis</h2>
+      <ul>
+        <li><strong>Gravitational Collapse:</strong> Dense regions in molecular clouds collapse.</li>
+        <li><strong>Protostar Phase:</strong> Infrared glow, rotating disk, rising temperature.</li>
+        <li><strong>Ignition:</strong> Fusion begins at ~10 million K, forming a main-sequence star.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Nuclear Fusion</h2>
+      <p>Stars fuse hydrogen into helium via the proton-proton chain or CNO cycle, releasing energy and maintaining hydrostatic equilibrium.</p>
+    </section>
+
+    <section>
+      <h2>Stellar Classification</h2>
+      <table>
+        <tr>
+          <th>Type</th><th>Color</th><th>Temp (K)</th><th>Mass (☉)</th><th>Lifespan</th>
+        </tr>
+        <tr><td>O</td><td>Blue</td><td>>30,000</td><td>15–100+</td><td>~1–10 Myr</td></tr>
+        <tr><td>B</td><td>Blue-white</td><td>10,000–30,000</td><td>2–15</td><td>~10–100 Myr</td></tr>
+        <tr><td>A</td><td>White</td><td>7,500–10,000</td><td>1.4–2</td><td>~500 Myr</td></tr>
+        <tr><td>F</td><td>Yellow-white</td><td>6,000–7,500</td><td>1.0–1.4</td><td>~2–4 Gyr</td></tr>
+        <tr><td>G</td><td>Yellow</td><td>5,200–6,000</td><td>0.8–1.0</td><td>~10 Gyr</td></tr>
+        <tr><td>K</td><td>Orange</td><td>3,700–5,200</td><td>0.5–0.8</td><td>~20–30 Gyr</td></tr>
+        <tr><td>M</td><td>Red</td><td><3,700</td><td>0.08–0.5</td><td>~100+ Gyr</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Star Anatomy</h2>
+      <ul>
+        <li><strong>Core:</strong> Fusion zone.</li>
+        <li><strong>Radiative Zone:</strong> Photon energy transfer.</li>
+        <li><strong>Convective Zone:</strong> Plasma circulation.</li>
+        <li><strong>Photosphere:</strong> Visible surface.</li>
+        <li><strong>Chromosphere & Corona:</strong> Outer layers, source of solar wind.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Life Cycle</h2>
+      <ul>
+        <li><strong>Low-Mass:</strong> Main Sequence → Red Giant → Planetary Nebula → White Dwarf</li>
+        <li><strong>High-Mass:</strong> Main Sequence → Red Supergiant → Supernova → Neutron Star or Black Hole</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Cosmic Significance</h2>
+      <p>Stars forge elements, shape galaxies, and enable life. Their deaths seed the universe with the building blocks of planets and organisms.</p>
+    </section>
+
+    <section>
+      <h2>Fun Facts</h2>
+      <ul>
+        <li>The Sun fuses 600 million tons of hydrogen per second.</li>
+        <li>A teaspoon of neutron star matter weighs a billion tons.</li>
+        <li>UY Scuti could engulf Saturn’s orbit.</li>
+      </ul>
+    </section>
+
+    
+
+    <section>
+      <div style="text-align:center;">
+        <a href="main page.html" class="cta-button">🔙 Back to main page</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with cosmic curiosity by Girish ✨</p>
+  </footer>
+</body>
+</html>

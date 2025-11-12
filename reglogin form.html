@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="loginstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Login</h2>
+        </header>
+        <form id="loginForm">
+            <div class="wrapper">
+                <input type="text" id="username" required>
+                <label for="username">Username</label>
+                <i class="fa fa-user"></i>
+            </div>
+            <div class="wrapper">
+                <input type="password" id="password" required>
+                <label for="password">Password</label>
+                <i class="fa fa-lock lock"></i>
+            </div>
+            <div class="remember_box">
+                <div class="remember">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <a href="registration.html">Forgot password?</a> <!-- ✅ Goes to registration -->
+            </div>
+            <button type="submit">Login</button>
+            <div class="signup">
+                Don't have an account? <a href="registration.html">Sign up</a> <!-- ✅ Goes to registration -->
+                <p>
+                    <a href="registration.html">Go to registration</a> <!-- ✅ Goes to registration -->
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <!-- ✅ Login Success Script -->
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Login successful!");
+        });
+    </script>
+
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const enteredFirstName = document.getElementById("username").value;
+        const enteredPassword = document.getElementById("password").value;
+
+        const storedFirstName = localStorage.getItem("registeredFirstName");
+        const storedPassword = localStorage.getItem("registeredPassword");
+
+        if (enteredFirstName === storedFirstName && enteredPassword === storedPassword) {
+            alert("Login successful!");
+            window.location.href = "main page.html";
+        } else {
+            alert("Wrong username or password!");
+        }
+    });
+</script>
+</body>
+</html>
+
+
+
+
+

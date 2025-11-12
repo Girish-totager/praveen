@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BCA Notes</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="Notes">
+        <h2>Registration Form</h2>
+        <div class="form-notes">
+            <form id="registrationForm">
+                <div class="input-name">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="First name" class="name" required>
+                    <span>
+                        <i class="fa fa-user"></i>
+                        <input type="text" placeholder="Last name" class="name" required>
+                    </span>
+                </div>
+
+                <div class="input-name">
+                    <i class="fa fa-envelope email"></i>
+                    <input type="email" placeholder="Email" required class="text-name">
+                </div>
+
+                <div class="input-name">
+                    <i class="fa fa-lock lock"></i>
+                    <input type="password" placeholder="Password" required class="text-name" id="password">
+                </div>
+
+                <div class="input-name">
+                    <i class="fa fa-lock lock"></i>
+                    <input type="password" placeholder="Confirm password" required class="text-name" id="confirmPassword">
+                </div>
+
+                <div class="input-name">
+                    <input type="radio" class="radio-button" name="gender" id="male">
+                    <label for="male" style="margin-right: 30px;">Male</label>
+
+                    <input type="radio" class="radio-button" name="gender" id="female">
+                    <label for="female" style="margin-right: 30px;">Female</label>
+                </div>
+
+                <div class="input-name">
+                    <input type="submit" class="button" value="Register">
+                    <p>
+                        <a href="reglogin form.html">Login here</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ✅ Password Match Validation Script -->
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from submitting
+
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match. Please try again.");
+                return;
+            }
+
+            alert("Registration was completed!");
+            window.location.href = "reglogin form.html"; // Redirect to login page
+        });
+    </script>
+</body>
+</html>
+
+
+
+<script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const firstName = document.querySelector('input[placeholder="First name"]').value;
+        const password = document.querySelector('input[placeholder="Password"]').value;
+        const confirmPassword = document.querySelector('input[placeholder="Confirm password"]').value;
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match. Please try again.");
+            return;
+        }
+
+        // Save first name and password to localStorage
+        localStorage.setItem("registeredFirstName", firstName);
+        localStorage.setItem("registeredPassword", password);
+
+        alert("Registration was completed!");
+        window.location.href = "reglogin form.html";
+    });
+</script>
+
